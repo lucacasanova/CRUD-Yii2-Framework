@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "3a474cc7-a826-4d0f-bb14-79defe255e6b",
+		"name": "Casanova Yii2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34313216"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"lucacasanova\",\n\t\"password\":\"0123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:85/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "85",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "qTBUx6j88yub9yM2W4X67YprSqQdqAh1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Coalize",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "809.452.710-26",
+									"type": "text"
+								},
+								{
+									"key": "postal_code",
+									"value": "88349-175",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "85",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "additional_information",
+									"value": "Rodovia BR-101, Km 131",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "postman-cloud:///1eefbe62-915f-49e0-8d27-b9a70c37752a"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:85/api/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "85",
+							"path": [
+								"api",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "QIQDDwLQNgfKt1u4vSkH2pzSIqvS0yT0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:85/api/client?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "85",
+							"path": [
+								"api",
+								"client"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "qTBUx6j88yub9yM2W4X67YprSqQdqAh1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Produto 1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "R$1.800,36",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "postman-cloud:///1eefbe62-915f-49e0-8d27-b9a70c37752a"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:85/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "85",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "qTBUx6j88yub9yM2W4X67YprSqQdqAh1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:85/api/product?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "85",
+							"path": [
+								"api",
+								"product"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "client_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
